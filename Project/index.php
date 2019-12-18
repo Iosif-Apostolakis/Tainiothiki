@@ -15,7 +15,7 @@
 <body>
 
 <div id="forma">
-    <form method="GET" action="movie_index.php">
+    <form method="GET" action="insert_movie.php">
     Movie Title:<br>
     <input type="text" name="MovieTitle"><br>
     Duration:<br>
@@ -29,17 +29,8 @@
 </div>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "myDB";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require ('connect.php');
 
 //    echo "Good to go";
 
